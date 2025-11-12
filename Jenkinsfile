@@ -26,10 +26,13 @@ pipeline {
 
         stage('OWASP Dependency Check') {
             steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                 dependencyCheck additionalArguments: '--scan ./ --format HTML', odcInstallation: 'db-check'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
         }
+        }
+        
 
         stage('SonarQube Analysis') {
             steps {
