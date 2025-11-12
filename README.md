@@ -13,7 +13,7 @@ This repository contains a sample Spring Boot application integrated with a CI/C
 - Trivy (Container security scanning)
 - Docker Compose (Container orchestration)
 
-## Pipeline Stages
+## Pipeline Stages 
 The CI/CD pipeline follows these key stages:  
 
 ![CI/CD Pipeline](images/cicd-pipeline.png)
@@ -96,3 +96,6 @@ docker run -d --name sonarqube -p 9000:9000 sonarqube:latest
 
 1. Install Docker and Docker Compose
 2. Configure Docker Hub authentication
+
+
+<!-- hi hi -->
